@@ -62,6 +62,7 @@ func dbInsert(p Profile) {
 }
 
 func getUsers(w http.ResponseWriter, req *http.Request) {
+	
 	session, err := mgo.Dial("db:27017")
 	if err != nil {
 		panic(err)
