@@ -1,0 +1,20 @@
+version: "3" 
+services:
+  web:
+      container_name: 'web'
+      image: 'devcloud201/jenkins-docker-demo'
+      ports:
+        - "3000:3000"
+      depends_on:
+        - 'db'
+  db:
+      container_name: 'db'
+      image: 'mongo'
+      ports:
+        - "27017:27017"
+      volumes:
+        - "mine:/data/db"
+      restart: 'always'
+
+volumes:
+  mine:
