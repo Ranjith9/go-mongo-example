@@ -21,6 +21,7 @@ type Profile struct {
 }
 
 func main() {
+	
 	http.HandleFunc("/", foo)
 	http.Handle("/favicon.ico", http.NotFoundHandler())
 	http.HandleFunc("/users", getUsers)
