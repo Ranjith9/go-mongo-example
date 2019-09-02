@@ -16,6 +16,7 @@ func init() {
 }
 
 type Profile struct {
+	
 	FirstName string
 	LastName  string
 }
