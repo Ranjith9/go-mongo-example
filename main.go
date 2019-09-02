@@ -85,5 +85,4 @@ func getUsers(w http.ResponseWriter, req *http.Request) {
 	output, _ := json.MarshalIndent(results, "", " ")
 	w.Header().Set("content-type", "application/json")
 	w.Write(output)
-
 }
